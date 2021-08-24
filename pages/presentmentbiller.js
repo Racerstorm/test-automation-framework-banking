@@ -7,8 +7,8 @@ let presentmentbiller = function()
     let amountdue_radio = element(by.shadowDomCss('paper-radio-group > paper-radio-button:nth-child(1)'));
     let minimumdue_radio = element(by.shadowDomCss('paper-radio-group > paper-radio-button:nth-child(2)'));
     let otheramount_radio = element(by.shadowDomCss('paper-radio-group > paper-radio-button:nth-child(3)'));
-    let otheramount_inputfield = element(by.shadowDomCss('input[aria-labelledby="paper-input-label-30"]'));
-    let remarksfield = element(by.shadowDomCss('input[aria-labelledby="paper-input-label-21"]'));
+    let otheramount_inputfield = element(by.shadowDomCss('input[aria-labelledby="paper-input-label-32"]'));
+    let remarksfield = element(by.shadowDomCss('input[aria-labelledby="paper-input-label-23"]'));
     //click next button to go to review 
     let nextbutton_detailspage = element(by.shadowDomCss('div.m-2.mx-desktop-0.pt-desktop-2 > paper-card > div.bottom-actions > paper-button'));
     let otpfield = element(by.shadowDomCss('input[name="PIN"]'));
@@ -43,11 +43,14 @@ let presentmentbiller = function()
 
         this.setRemarks = function(remarks_value)
         {
+            console.log("Set Remarks");
             remarksfield.sendKeys(remarks_value);
+            
         }
         
         this.clickNextButton = function()
         {
+            console.log("clickNextButton");
             nextbutton_detailspage.click();
         }
 
