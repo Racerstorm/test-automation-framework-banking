@@ -12,7 +12,7 @@ exports.config = {
     plugins: [{
         package: 'query-selector-shadow-dom/plugins/protractor'
     }],
-    specs: ['../tests/presentmentbiller_test.js'],
+    specs: ['../tests/loginpageTest.js'],
 
     onPrepare: function() {
         // Add a screenshot reporter and store screenshots to `/Reports/screenshots`:
@@ -21,5 +21,6 @@ exports.config = {
                 screenshotsSubfolder: 'screenshots'
                 //jsonsSubfolder: 'jsonFiles'
              }).getJasmine2Reporter());
+             require('../utilities/FindLocator').findShadowDomLocator();
           }
     };

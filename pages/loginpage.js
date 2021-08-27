@@ -3,7 +3,8 @@ let loginpage = function(){
     browser.ignoreSynchronization = true;
     browser.waitForAngularEnabled(false);
 
-    let username=element(by.shadowDomCss('input[aria-labelledby="paper-input-label-7"]'));
+   // let username=element(by.shadowDomCss('input[aria-labelledby="paper-input-label-7"]'));
+    var username = element(by.css_sr('ev-login::sr #originalU::sr input'));
     let remember_me_checkbox = element(by.shadowDomCss('#checkboxContainer'));
     let nextbutton = element(by.shadowDomCss('#desktoploginModes'));
     let password=element(by.shadowDomCss('input[aria-labelledby="paper-input-label-8"]'));
