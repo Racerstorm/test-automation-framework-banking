@@ -21,6 +21,7 @@ exports.config = {
                 screenshotsSubfolder: 'screenshots'
                 //jsonsSubfolder: 'jsonFiles'
              }).getJasmine2Reporter());
+             
              require('../utilities/FindLocator').findShadowDomLocator();
           }
     };

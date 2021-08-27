@@ -1,5 +1,6 @@
 exports.findShadowDomLocator = function () 
 {
+    //Retrieve shadow dom elements
     by.addLocator('css_sr', (cssSelector, opt_parentElement, opt_rootSelector) => {
         let selectors = cssSelector.split('::sr');
         if (selectors.length === 0) {
