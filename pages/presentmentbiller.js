@@ -1,9 +1,9 @@
+const { waitForElement } = require("../utilities/commonUtilities");
 let presentmentbiller = function()
 {
-    browser.ignoreSynchronization = true;
-    browser.waitForAngularEnabled(false);
 
-    //Amount due radio button
+    let backbutton = element(by.css_sr('#app-sub-header::sr .action-icon-button.paypage.outlineOffset::sr #icon')); 
+    let accountselectionOverlay = element(by.css_sr('biller-xfer-landing-new::sr biller-xfer-input-new::sr form>div>div>account-selection::sr #accountSelectionInput::sr .input-element > input'));
     let amountdue_radio = element(by.shadowDomCss('paper-radio-group > paper-radio-button:nth-child(1)'));
     let minimumdue_radio = element(by.shadowDomCss('paper-radio-group > paper-radio-button:nth-child(2)'));
     let otheramount_radio = element(by.shadowDomCss('paper-radio-group > paper-radio-button:nth-child(3)'));
@@ -15,9 +15,21 @@ let presentmentbiller = function()
     let confirmButton = element(by.shadowDomCss('div.m-2.mx-desktop-0.pt-desktop-2 > paper-card > div.bottom-actions > paper-button.primary-button.m-0'));
     let successMessage = element(by.shadowDomCss('#successHeading'));  
 
+    
+   this.clickonBackButton = function()
+   {
+       waitForElement('clickable',backbutton);
+       backbutton.click();
+   }
+
+    this.openAccountSelectionOverlay = function()
+    {
+        accountselectionOverlay.click();
+    }
 
     this.selectradiobutton = function(radiobuttonvalue,otheramount_value)
     {
+        
         switch (radiobuttonvalue) {
             case 'Amount Due':
               console.log('Amount Due');
