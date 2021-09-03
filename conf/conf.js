@@ -27,5 +27,10 @@ exports.config = {
              browser.manage().timeouts().implicitlyWait(30000);
              require('../utilities/FindLocator').findShadowDomLocator();
              require('../utilities/commonUtilities').waitForElement();
-          }
+          },
+          jasmineNodeOpts: {
+            showColors: true,
+            includeStackTrace: true,
+            defaultTimeoutInterval: 1440000
+           }
     };
