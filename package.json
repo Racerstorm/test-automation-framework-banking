@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "query-selector-shadow-dom": "^1.0.0"
+  },
+  "devDependencies": {
+    "protractor-beautiful-reporter": "^1.3.6"
+  }
+}

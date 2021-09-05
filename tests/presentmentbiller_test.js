@@ -5,16 +5,16 @@ var testdata = require('../testdata/Testdata_environment.json');
 
 describe('Smoke Tests - Bill payment', function()
 {
-    // beforeEach(function(){
+    beforeEach(function(){
 	// 	console.log("Before Each block")
-    //     loginpageObject.get(testdata.url);
-    //     loginpageObject.login(testdata.username,testdata.password);
-	// });
+     loginpageObject.get(testdata.url);
+    loginpageObject.login(testdata.username,testdata.password);
+	 });
 
     it("Back button on details page should redirect user to the homepage", function()
     {
-        loginpageObject.get(testdata.url);
-        loginpageObject.login(testdata.username,testdata.password);
+        // loginpageObject.get(testdata.url);
+        // loginpageObject.login(testdata.username,testdata.password);
         homepageObject.clickonViewAll_upcomingPayments();
         homepageObject.clickonPayfromOverlay();
         
@@ -25,8 +25,8 @@ describe('Smoke Tests - Bill payment', function()
 
      it("Initiates and complete Upcoming Payments flow from the dashboard", function()
     {
-        loginpageObject.get(testdata.url);
-        loginpageObject.login(testdata.username,testdata.password);
+        // loginpageObject.get(testdata.url);
+        // loginpageObject.login(testdata.username,testdata.password);
         homepageObject.clickonViewAll_upcomingPayments();
         homepageObject.clickonPayfromOverlay();
         browser.sleep(1000);
